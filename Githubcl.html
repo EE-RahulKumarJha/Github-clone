@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<style>
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #612345;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #abaeae;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+display: inline-block;
+margin-left: 10px;
+}
+
+.dashboard {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dashboard h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.dashboard h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.dashboard ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.dashboard li {
+  margin-bottom: 10px;
+}
+
+.dashboard .repos li {
+  font-weight: bold;
+}
+
+.dashboard .repos a {
+  color: #111111;
+  text-decoration: none;
+}
+
+.dashboard .repos a:hover {
+  text-decoration: underline;
+}
+
+.search-bar {
+display: flex;
+align-items: center;
+margin: 0 10px;
+border: 1px solid #d1d5da;
+border-radius: 3px;
+}
+
+.search-bar input {
+border: none;
+background-color: #ffffff;
+padding: 5px;
+width: 250px;
+color: #fff;
+}
+
+.search-bar button {
+border: none;
+background-color: transparent;
+color: #fff;
+cursor: pointer;
+}
+
+.profile {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+
+.profile img {
+border-radius: 50%;
+width: 25px;
+height: 25px;
+margin-right: 5px;
+}
+
+.profile span {
+color: #fff;
+font-weight: bold;
+margin-right: 5px;
+}
+
+.fa {
+font-size: 12px;
+}
+
+main {
+margin: 20px 10px;
+}
+
+.repo-info h1 {
+font-size: 36px;
+margin-bottom: 10px;
+}
+
+.repo-info p {
+margin-bottom: 20px;
+}
+
+.tabs ul {
+list-style: none;
+margin: 0;
+padding: 0;
+border-bottom: 1px solid #e1e4e8;
+}
+
+.tabs li {
+display: inline-block;
+margin-right: 10px;
+border-bottom: 2px solid transparent;
+padding-bottom: 5px;
+}
+
+.tabs li.active {
+border-bottom-color: #0366d6;
+}
+
+.files ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.files li {
+padding: 10px;
+border-bottom: 1px solid #e1e4e8;
+}
+
+.files li:hover {
+background-color: #f6f8fa;
+}
+
+.footer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #f6f8fa;
+border-top: 1px solid #d1d5da;
+padding: 10px;
+}
+
+.footer ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.footer li {
+display: inline-block;
+margin-right: 10px;
+}
+
+.footer p {
+margin: 0;
+font-size: 12px;
+}
+ 
+
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Clone</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Pull Requests</a></li>
+          <li><a href="#">Issues</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Explore</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search GitHub">
+        <button><i class="fa fa-search"></i></button>
+      </div>
+      <div class="profile">
+        <img src="https://avatars.githubusercontent.com/u/57936?v=4" alt="Profile Picture">
+        <span>Github_Clone</span>
+        <i class="fa fa-chevron-down"></i>
+      </div>
+    </header>
+
+    <main>
+<div class="dashboard">
+  <h1>Welcome, <span id="username"></span>!</h1>
+  <div class="recent-activity">
+    <h2>Recent Activity</h2>
+    <ul id="activity-list">
+    </ul>
+  </div>
+  <div class="repos">
+    <h2>Your Repositories</h2>
+    <ul id="repo-list">
+    </ul>
+  </div>
+</div>
+
+      <div class="repo-info">
+        <h1>github/clone</h1>
+        <p>A clone of the Github website using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="tabs">
+        <ul>
+          <li class="active"><a href="#">Code</a></li>
+          <li><a href="#">Issues</a></li>
+          <li><a href="#">Pull Requests</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Wiki</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Insights</a></li>
+        </ul>
+      </div>
+      <div class="files">
+        <ul>
+          <li><a href="#">index.html</a></li>
+          <li><a href="#">style.css</a></li>
+          <li><a href="#">script.js</a></li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Security</a></li>
+        <li><a href="#">Status</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Contact GitHub</a></li>
+      </ul>
+      <p>&copy; 2023 GitHub, Inc. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
